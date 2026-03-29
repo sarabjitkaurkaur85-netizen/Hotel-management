@@ -49,7 +49,7 @@ body {
 
 .hero {
     min-height: 100vh;
-    background: url('2h.jpg') no-repeat center/cover;
+    background: url('images/2h.jpg') no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
