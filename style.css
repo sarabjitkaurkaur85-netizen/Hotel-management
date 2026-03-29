@@ -1,4 +1,3 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +7,9 @@
 
 body {
     background: #f5f5f5;
+    color: #222;
 }
 
-/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -21,6 +20,7 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .logo {
@@ -47,9 +47,8 @@ body {
     text-decoration: none;
 }
 
-/* HERO */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     background: url('2h.jpg') no-repeat center/cover;
     display: flex;
     align-items: center;
@@ -57,7 +56,8 @@ body {
     text-align: center;
     color: #fff;
     position: relative;
-    margin-top: 70px;
+    margin-top: 80px;
+    padding: 100px 20px;
 }
 
 .hero::after {
@@ -65,7 +65,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     top: 0;
     left: 0;
 }
@@ -73,7 +73,6 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-   
 }
 
 .hero h1 {
@@ -85,11 +84,10 @@ body {
     font-size: 18px;
 }
 
-/* BOOKING FORM */
 .booking {
     position: absolute;
     bottom: 40px;
-    width: 80%;
+    width: min(90%, 1100px);
     background: #fff;
     padding: 20px;
     border-radius: 12px;
@@ -97,6 +95,7 @@ body {
     gap: 15px;
     align-items: center;
     z-index: 3;
+    text-align: left;
 }
 
 .booking div {
@@ -111,132 +110,218 @@ body {
 .booking input {
     width: 100%;
     border: none;
+    border-bottom: 1px solid #ddd;
     font-size: 14px;
     margin-top: 5px;
+    padding: 6px 4px;
 }
 
 .search-btn {
     background: #b08b57;
     color: #fff;
     border: none;
-    padding: 12px 16px;
-    border-radius: 50%;
+    padding: 12px 20px;
+    border-radius: 999px;
     cursor: pointer;
 }
-.heading{
-    margin: 50px;
-}
-.color{
-    color: rgb(122, 22, 22);
-}
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  margin: 0;
-  padding: 20px;
+
+main {
+    padding: 60px 20px 80px;
 }
 
-/* Container for horizontal cards */
-.card-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap; /* makes it responsive */
+.section-block {
+    max-width: 1200px;
+    margin: 0 auto 60px;
 }
 
-/* Card */
-.card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: 0.3s;
+.heading,
+.section-title {
+    margin-bottom: 24px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.heading h1,
+.section-title {
+    font-size: 38px;
+    color: #222;
 }
 
-/* Image section */
-.card-img {
-  position: relative;
+.carousel {
+    position: relative;
+    width: 100%;
+    padding: 0 36px;
 }
 
-.card-img img {
-  width: 100%;
-  display: block;
+.carousel-viewport {
+    overflow: hidden;
 }
 
-/* Badge */
-.badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: pink;
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-size: 12px;
+.carousel-track {
+    display: flex;
+    transition: transform 0.45s ease;
+    will-change: transform;
 }
 
-/* Card body */
-.card-body {
-  padding: 15px;
+.carousel-slide {
+    flex: 0 0 auto;
+    padding: 0 10px;
 }
 
-.card-body h3 {
-  margin: 0 0 10px;
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: #222;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    z-index: 5;
 }
 
-.rating {
-  color: #aaa;
-  font-size: 14px;
+.carousel-btn-prev {
+    left: 0;
 }
 
-/* Price row */
-.price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
+.carousel-btn-next {
+    right: 0;
 }
 
-.price span {
-  font-weight: bold;
+.offer-card,
+.room-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
 
-.price a {
-  text-decoration: none;
-  color: #c49b63;
-  font-weight: bold;
+.offer-image,
+.room-card-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-.slider {
-  width: 320px;
-  overflow: hidden;
-  margin: auto;
+.offer-card-body,
+.room-card-body {
+    padding: 18px;
 }
 
-.card-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+.offer-title {
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 10px;
 }
 
-.card {
-  min-width: 300px;
-  margin-right: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #fff;
+.offer-text {
+    color: #4a4a4a;
+    margin-bottom: 12px;
 }
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.offer-link {
+    color: #7a1616;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-.card-body {
-  padding: 10px;
+.room-card-img {
+    position: relative;
+}
+
+.room-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #f3c5d4;
+    color: #3a3a3a;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.room-card-body h3 {
+    margin-bottom: 10px;
+}
+
+.room-rating {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.room-meta {
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.room-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.room-price span {
+    font-weight: bold;
+}
+
+.room-price a {
+    text-decoration: none;
+    color: #c49b63;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+
+    .logo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .booking {
+        flex-wrap: wrap;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .heading h1,
+    .section-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-links,
+    .book-btn {
+        display: none;
+    }
+
+    .carousel {
+        padding: 0 26px;
+    }
+
+    .carousel-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .offer-title {
+        font-size: 24px;
+    }
 }

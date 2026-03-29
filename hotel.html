@@ -6,13 +6,11 @@
     <title>Hotel Demo</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 </head>
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
-    <div class="logo"><img src="logo.png"  height="150px;" width="150px;"></div>
+    <div class="logo"><img src="logo.png" height="150" width="150" alt="Hotel logo"></div>
 
     <nav class="nav-links">
         <a href="#">Demos</a>
@@ -26,14 +24,12 @@
     <a href="#" class="book-btn">Book Now</a>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero">
     <div class="hero-content">
         <h1>The Perfect Beachfront Destination</h1>
         <p>Experience a refreshing approach to your stay at The Beach Hotel</p>
     </div>
 
-    <!-- BOOKING FORM -->
     <div class="booking">
         <div>
             <label>Check-in</label>
@@ -55,123 +51,147 @@
             <input type="number" value="0">
         </div>
 
-        <button class="search-btn">🔍</button>
+        <button class="search-btn" type="button">Search</button>
     </div>
-    
 </section>
-<div class="heading">
-    <h1>Offers To Inspire You</h1>
-</div>
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="offer-box-1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h1 class="card-title">Family Escape</h1>
-        <p class="card-text">Children eat free, exciting fun activities</p>
-        <p class="color">Read More</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="offer-box-2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h1 class="card-title">Business Trip</h1>
-        <p class="card-text">Up to 20% off food and services</p>
-        <p class="color">Read More</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="offer-box-3.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h1 class="card-title">Romance</h1>
-        <p class="card-text">Discount room rates, reward points </p>
-        <p class="color">Read More</p>
-      </div>
-    </div>
-  </div>
-</div>
-<h1>Our rooms & suites</h1>
 
+<main>
+    <section class="section-block">
+        <div class="heading">
+            <h1>Offers To Inspire You</h1>
+        </div>
 
-<div class="card-container">
+        <div class="carousel" data-carousel data-autoplay="4200" data-desktop-slides="2" data-tablet-slides="1" data-mobile-slides="1">
+            <button class="carousel-btn carousel-btn-prev" type="button" aria-label="Previous offer">&#10094;</button>
+            <div class="carousel-viewport">
+                <div class="carousel-track">
+                    <article class="carousel-slide">
+                        <div class="offer-card">
+                            <img src="offer-box-1.jpg" class="offer-image" alt="Family Escape">
+                            <div class="offer-card-body">
+                                <h2 class="offer-title">Family Escape</h2>
+                                <p class="offer-text">Children eat free, exciting fun activities</p>
+                                <a class="offer-link" href="#">Read More</a>
+                            </div>
+                        </div>
+                    </article>
 
-  <!-- Card 1 -->
-  <div class="card">
-    <div class="card-img">
-      <img src="https://picsum.photos/400/250?1" alt="">
-      <span class="badge">Balcony</span>
-    </div>
-    <div class="card-body">
-      <h3>Ocean View Seagull</h3>
-      <p class="rating">☆☆☆☆☆ (0 reviews)</p>
-      <p>👤 2 Adults</p>
-      <p>👶 5 Children</p>
-      <div class="price">
-        <span>$64.00 / Night</span>
-        <a href="#">View Detail</a>
-      </div>
-    </div>
-  </div>
+                    <article class="carousel-slide">
+                        <div class="offer-card">
+                            <img src="offer-box-2.jpg" class="offer-image" alt="Business Trip">
+                            <div class="offer-card-body">
+                                <h2 class="offer-title">Business Trip</h2>
+                                <p class="offer-text">Up to 20% off food and services</p>
+                                <a class="offer-link" href="#">Read More</a>
+                            </div>
+                        </div>
+                    </article>
 
-  <!-- Card 2 -->
-  <div class="card">
-    <div class="card-img">
-      <img src="https://picsum.photos/400/250?2" alt="">
-      <span class="badge">Balcony</span>
-    </div>
-    <div class="card-body">
-      <h3>Days Ranges Pricing</h3>
-      <p class="rating">★★★★★ (2 reviews)</p>
-      <p>👤 2 Adults</p>
-      <p>👶 5 Children</p>
-      <div class="price">
-        <span><del>$500</del> $345 / Night</span>
-        <a href="#">View Detail</a>
-      </div>
-    </div>
-  </div>
+                    <article class="carousel-slide">
+                        <div class="offer-card">
+                            <img src="offer-box-3.jpg" class="offer-image" alt="Romance">
+                            <div class="offer-card-body">
+                                <h2 class="offer-title">Romance</h2>
+                                <p class="offer-text">Discount room rates, reward points</p>
+                                <a class="offer-link" href="#">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-btn-next" type="button" aria-label="Next offer">&#10095;</button>
+        </div>
+    </section>
 
-  <!-- Card 3 -->
-  <div class="card">
-    <div class="card-img">
-      <img src="https://picsum.photos/400/250?3" alt="">
-      <span class="badge">Balcony</span>
-    </div>
-    <div class="card-body">
-      <h3>Presidential Suite</h3>
-      <p class="rating">☆☆☆☆☆ (0 reviews)</p>
-      <p>👤 2 Adults</p>
-      <p>👶 5 Children</p>
-      <div class="price">
-        <span>$78.00 / Night</span>
-        <a href="#">View Detail</a>
-      </div>
-    </div>
-  </div>
+    <section class="section-block">
+        <h1 class="section-title">Our rooms &amp; suites</h1>
 
-  <div class="card">
-    <div class="card-img">
-      <img src="https://picsum.photos/400/250?1" alt="">
-      <span class="badge">Balcony</span>
-    </div>
-    <div class="card-body">
-      <h3>Ocean View Seagull</h3>
-      <p class="rating">☆☆☆☆☆ (0 reviews)</p>
-      <p>👤 2 Adults</p>
-      <p>👶 5 Children</p>
-      <div class="price">
-        <span>$64.00 / Night</span>
-        <a href="#">View Detail</a>
-      </div>
-    </div>
-  </div>
+        <div class="carousel" data-carousel data-autoplay="5200" data-desktop-slides="3" data-tablet-slides="2" data-mobile-slides="1">
+            <button class="carousel-btn carousel-btn-prev" type="button" aria-label="Previous room">&#10094;</button>
+            <div class="carousel-viewport">
+                <div class="carousel-track">
+                    <article class="carousel-slide">
+                        <div class="room-card">
+                            <div class="room-card-img">
+                                <img src="room-hotel-1.jpeg" alt="Ocean View Seagull">
+                                <span class="room-badge">Balcony</span>
+                            </div>
+                            <div class="room-card-body">
+                                <h3>Ocean View Seagull</h3>
+                                <p class="room-rating">&#9734;&#9734;&#9734;&#9734;&#9734; (0 reviews)</p>
+                                <p class="room-meta">2 Adults</p>
+                                <p class="room-meta">5 Children</p>
+                                <div class="room-price">
+                                    <span>$64.00 / Night</span>
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
+                    <article class="carousel-slide">
+                        <div class="room-card">
+                            <div class="room-card-img">
+                                <img src="room-hotel-2.jpg" alt="Days Ranges Pricing">
+                                <span class="room-badge">Balcony</span>
+                            </div>
+                            <div class="room-card-body">
+                                <h3>Days Ranges Pricing</h3>
+                                <p class="room-rating">&#9733;&#9733;&#9733;&#9733;&#9733; (2 reviews)</p>
+                                <p class="room-meta">2 Adults</p>
+                                <p class="room-meta">5 Children</p>
+                                <div class="room-price">
+                                    <span><del>$500</del> $345 / Night</span>
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-</body>
-</html>
+                    <article class="carousel-slide">
+                        <div class="room-card">
+                            <div class="room-card-img">
+                                <img src="room-hotel-3.jpeg" alt="Presidential Suite">
+                                <span class="room-badge">Balcony</span>
+                            </div>
+                            <div class="room-card-body">
+                                <h3>Presidential Suite</h3>
+                                <p class="room-rating">&#9734;&#9734;&#9734;&#9734;&#9734; (0 reviews)</p>
+                                <p class="room-meta">2 Adults</p>
+                                <p class="room-meta">5 Children</p>
+                                <div class="room-price">
+                                    <span>$78.00 / Night</span>
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="carousel-slide">
+                        <div class="room-card">
+                            <div class="room-card-img">
+                                <img src="room-hotel-4.jpeg" alt="City Comfort Deluxe">
+                                <span class="room-badge">Balcony</span>
+                            </div>
+                            <div class="room-card-body">
+                                <h3>City Comfort Deluxe</h3>
+                                <p class="room-rating">&#9733;&#9733;&#9733;&#9734;&#9734; (4 reviews)</p>
+                                <p class="room-meta">3 Adults</p>
+                                <p class="room-meta">2 Children</p>
+                                <div class="room-price">
+                                    <span>$92.00 / Night</span>
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-btn-next" type="button" aria-label="Next room">&#10095;</button>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
